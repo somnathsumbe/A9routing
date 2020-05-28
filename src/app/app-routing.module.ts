@@ -9,6 +9,8 @@ import { StudentDetailsComponent } from "./student-details/student-details.compo
 import { StudentragistrationComponent } from "./studentragistration/studentragistration.component";
 import { StudentcontactdetailsComponent } from "./studentcontactdetails/studentcontactdetails.component";
 import { StudentparantdetailsComponent } from "./studentparantdetails/studentparantdetails.component";
+import { BookComponent } from './book/book.component';
+import { BookdetailsComponent } from './book/bookdetails/bookdetails.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "dashbord", pathMatch: "full" },
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: "about", component: AboutComponent },
   { path: "about/:id", component: AboutComponent },
   { path: "contact", component: ContactComponent },
+
+
 
   // -- 2class********* bad practice*********************
   // { path: "student", component: StudentComponent },
@@ -38,6 +42,10 @@ const routes: Routes = [
       { path: "ragistration", component: StudentragistrationComponent },
     ],
   },
+
+  { path: "book", component: BookComponent },
+  { path: "book/bookdetails/:id", component: BookdetailsComponent },
+  { path: "book/bookdetails/:id/:price", component: BookdetailsComponent },
 
   // { path: "**", component: ErrorComponent }
 ];

@@ -12,6 +12,8 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { StudentragistrationComponent } from './studentragistration/studentragistration.component';
 import { StudentcontactdetailsComponent } from './studentcontactdetails/studentcontactdetails.component';
 import { StudentparantdetailsComponent } from './studentparantdetails/studentparantdetails.component';
+import { BookComponent } from './book/book.component';
+import { BookdetailsComponent } from './book/bookdetails/bookdetails.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { StudentparantdetailsComponent } from './studentparantdetails/studentpar
     StudentDetailsComponent,
     StudentragistrationComponent,
     StudentcontactdetailsComponent,
-    StudentparantdetailsComponent
+    StudentparantdetailsComponent,
+    BookComponent,
+    BookdetailsComponent
   ],
   imports: [
     BrowserModule,

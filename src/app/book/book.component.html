@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class=" bg-warning my-2 p-2 text-center text-white"> Books Details with single paramiter</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered table-condensed">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <!-- <th>Price</th>
+            <th>Description</th> -->
+            <th>show Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of myAllBooks">
+            <td>{{book.id}}</td>
+            <td>{{book.name}}</td>
+            <!-- <td>{{book.price}}</td>
+            <td>{{book.description}}</td> -->
+            <td><a [routerLink]="['bookdetails',book.id]">Show Details</a> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class=" bg-warning my-2 p-2 text-center text-white"> Books Details with mutlipal  paramiter</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered table-condensed">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <!-- <th>Price</th>
+            <th>Description</th> -->
+            <th>show Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of myAllBooks">
+            <td>{{book.id}}</td>
+            <td>{{book.name}}</td>
+            <!-- <td>{{book.price}}</td>
+            <td>{{book.description}}</td> -->
+            <td><a [routerLink]="['bookdetails',book.id, book.price]">Show Details</a> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

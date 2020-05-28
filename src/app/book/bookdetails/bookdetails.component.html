@@ -1,0 +1,58 @@
+<p>bookdetails works!</p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class=" bg-warning my-2 p-2 text-center text-white"> Books Details with single paramiter</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul *ngFor="let book of myAllBooks">
+        <li>{{book.id}}</li>
+        <li>{{book.name}}</li>
+        <li>{{book.price}}</li>
+        <li>{{book.description}}</li>
+        <li><a [routerLink]="['bookdetails',book.id]">Show Details</a> </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class=" bg-warning my-2 p-2 text-center text-white"> Show Details</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered table-condensed">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{bookdetails.id}}</td>
+            <td>{{bookdetails.name}}</td>
+            <td>{{bookdetails.price}}</td>
+            <td>{{bookdetails.description}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="button" class="btn btn-primary" (click)="gotoBack()">Back to Page </button>
+    </div>
+  </div>
+
+
+
+
+</div>
